@@ -1,10 +1,12 @@
 package com.bothsavage.basic.project.config.swagger;
 
+import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
+import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
@@ -19,9 +21,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 /**
- *
- * Date: Created in 18/8/29 上午9:54
- * Utils: Intellij Idea
  * Description: swagger配置类
  */
 @Configuration
@@ -35,17 +34,15 @@ public class SwaggerConfiguration {
 
     @Bean
     public Docket createRestApi() {
+
         return new Docket(DocumentationType.SWAGGER_2)
-                .groupName(swaggerInfo.getGroupName())
-                .useDefaultResponseMessages(false)
-                .enableUrlTemplating(false)
-                .forCodeGeneration(true)
-                .useDefaultResponseMessages(false)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage(swaggerInfo.getBasePackage()))
+                .apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))  //添加ApiOperiation注解的被扫描
+//                .apis(RequestHandlerSelectors.basePackage(swaggerInfo.getBasePackage())  //扫描全包
                 .paths(PathSelectors.any())
                 .build();
+
     }
 
     /**
@@ -54,16 +51,8 @@ public class SwaggerConfiguration {
      * @return 返回ApiInfo
      */
     private ApiInfo apiInfo() {
-        StringVendorExtension vendorExtension = new StringVendorExtension("", "");
-        Collection<VendorExtension> vendorExtensions = new ArrayList<>();
-        vendorExtensions.add(vendorExtension);
-        Contact contact = new Contact("", "", "");
-        return new ApiInfo(
-                swaggerInfo.getTitle(),
-                swaggerInfo.getDescription(),
-                swaggerInfo.getVersion(),
-                "", contact, "", "",
-                vendorExtensions);
+        return new ApiInfoBuilder().title(swaggerInfo.getTitle()).description(swaggerInfo.getDescription())
+                .version(swaggerInfo.getVersion()).build();
     }
 
 }

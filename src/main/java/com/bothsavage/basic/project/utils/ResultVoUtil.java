@@ -5,9 +5,6 @@ import com.bothsavage.basic.project.enums.ResultEnum;
 import com.bothsavage.basic.project.vo.ResultVo;
 
 /**
- *
- * Date: Created in 18/8/20 上午11:05
- * Utils: Intellij Idea
  * Description: 返回数据工具类
  */
 public class ResultVoUtil {

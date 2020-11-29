@@ -5,9 +5,6 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 /**
- *
- * Date: Created in 2018-12-17 11:05
- * Utils: Intellij Idea
  * Description: 固定返回格式
  */
 @Data

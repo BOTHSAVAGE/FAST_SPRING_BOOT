@@ -4,15 +4,11 @@ import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
-/**
- *
- * Date: Created in 18/8/29 上午9:54
- * Utils: Intellij Idea
- * Description: swagger 配置信息
- */
 
+/**
+ * Description: swagger配置信息
+ */
 @Data
-@Component
 @ConfigurationProperties(prefix = "swagger")
 public class SwaggerInfo {
 
@@ -40,10 +36,5 @@ public class SwaggerInfo {
      * 扫描的包路径
      */
     private String basePackage;
-
-    /**
-     * 接口作者
-     */
-    private String author;
 
 }

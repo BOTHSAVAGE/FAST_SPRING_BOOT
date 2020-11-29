@@ -1,8 +1,8 @@
 server:
   # 服务器端口号
-  port: 8080
+  port: 8999
   servlet:
-    context-path: /basic_project
+    context-path: /
 spring:
   profiles:
     # 选择环境
@@ -44,9 +44,9 @@ mybatis-plus:
 
 # 配置swagger
 swagger:
-  version: 2.0
+  version: 1.0
   groupName: 基础项目
-  title: 基础项目
+  title: FAST_SPRING_BOOT项目
   description: 接口文档
   # 扫描的包路径
   basePackage: com.bothsavage.basic.project.controller

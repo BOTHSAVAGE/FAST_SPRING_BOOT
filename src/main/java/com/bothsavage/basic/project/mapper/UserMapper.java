@@ -10,9 +10,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 /**
- *
- * @date Created in 2020/3/7 2:21 下午
- * Utils: Intellij Idea
  * Description: 数据库资源操作类
  */
 @Repository

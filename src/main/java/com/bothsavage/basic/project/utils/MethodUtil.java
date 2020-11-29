@@ -3,9 +3,6 @@ package com.bothsavage.basic.project.utils;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- *
- * Date: Created in 18/5/20 下午4:49
- * Utils: Intellij Idea
  * Description: 获取当前方法和行号
  */
 @Slf4j

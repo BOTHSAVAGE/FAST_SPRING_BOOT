@@ -1,6 +1,7 @@
 # 创建数据库
-CREATE DATABASE basic_project;
-
+CREATE DATABASE fast_spring_boot;
+#使用该数据库
+use  fast_spring_boot;
 # 初始化表接口
 CREATE TABLE `user` (
     `id` int NOT NULL AUTO_INCREMENT COMMENT '主键',
