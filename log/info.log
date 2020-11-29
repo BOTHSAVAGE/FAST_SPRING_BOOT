@@ -1,0 +1,15 @@
+2020-11-19 15:10:35.325 [restartedMain] INFO  com.bothsavage.basic.project.BasicProjectApplication - Starting BasicProjectApplication on DESKTOP-PDNG3RK with PID 12940 (D:\Project\basic_project\target\classes started by T440p in D:\Project\basic_project)
+2020-11-19 15:10:35.331 [restartedMain] INFO  com.bothsavage.basic.project.BasicProjectApplication - The following profiles are active: dev
+2020-11-19 15:10:35.777 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-11-19 15:10:35.778 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-11-19 15:10:41.483 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-11-19 15:10:41.507 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-11-19 15:10:41.508 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-11-19 15:10:41.508 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-11-19 15:10:41.920 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/basic_project] - Initializing Spring embedded WebApplicationContext
+2020-11-19 15:10:41.920 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 6140 ms
+2020-11-19 15:10:42.668 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - DatebookHikariCP - Starting...
+2020-11-19 15:10:58.989 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2020-11-19 15:10:59.010 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
